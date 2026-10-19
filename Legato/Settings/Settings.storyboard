@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Set-VC-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="scn-304-ne5">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="Set-VC-001" customClass="SettingsViewController" customModule="Legato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vie-305-nf6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sta-306-ng7">
+                                <rect key="frame" x="32" y="119" width="329" height="520"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="img-307-nh8">
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="90"/>
+                                        <color key="tintColor" name="LegatoMuted"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="ihC-308-ni9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-309-nj0">
+                                        <rect key="frame" x="0.0" y="106" width="329" height="34"/>
+                                        <state key="normal" title="Change Photo"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Change Photo">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <color key="baseForegroundColor" name="LegatoBlue"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changePhotoTapped:" destination="Set-VC-001" eventType="touchUpInside" id="act-310-nk1"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txt-311-nl2">
+                                        <rect key="frame" x="0.0" y="156" width="329" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="fhC-312-nm3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="none" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="row-313-nn4">
+                                        <rect key="frame" x="0.0" y="216" width="329" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-314-no5">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="LegatoInk"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="dpk-315-np6">
+                                                <rect key="frame" x="208" y="0.0" width="121" height="34"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="row-316-nq7">
+                                        <rect key="frame" x="0.0" y="266" width="329" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-317-nr8">
+                                                <rect key="frame" x="0.0" y="0.0" width="272" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="LegatoInk"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swi-318-ns9">
+                                                <rect key="frame" x="280" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" name="LegatoBlue"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="row-319-nt0">
+                                        <rect key="frame" x="0.0" y="313" width="329" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Echo distance (mi)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-320-nu1">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="LegatoInk"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="seg-321-nv2">
+                                                <rect key="frame" x="158" y="0.0" width="171" height="33"/>
+                                                <segments>
+                                                    <segment title="5"/>
+                                                    <segment title="10"/>
+                                                    <segment title="25"/>
+                                                    <segment title="50"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-322-nw3">
+                                        <rect key="frame" x="0.0" y="361" width="329" height="34"/>
+                                        <state key="normal" title="Link Spotify"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Link Spotify">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                            <color key="baseForegroundColor" name="LegatoBlue"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="linkSpotifyTapped:" destination="Set-VC-001" eventType="touchUpInside" id="act-323-nx4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-324-ny5">
+                                        <rect key="frame" x="0.0" y="411" width="329" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="bhC-325-nz6"/>
+                                        </constraints>
+                                        <state key="normal" title="Log Out"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log Out" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="baseForegroundColor" name="LegatoOnBlue"/>
+                                            <color key="baseBackgroundColor" name="LegatoBlue"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="logOutTapped:" destination="Set-VC-001" eventType="touchUpInside" id="act-326-oa7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-327-ob8">
+                                        <rect key="frame" x="0.0" y="479" width="329" height="34"/>
+                                        <state key="normal" title="Delete Account"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Delete Account">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <color key="baseForegroundColor" name="LegatoError"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteAccountTapped:" destination="Set-VC-001" eventType="touchUpInside" id="act-328-oc9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="saf-329-od0"/>
+                        <color key="backgroundColor" name="LegatoCream"/>
+                        <constraints>
+                            <constraint firstItem="sta-306-ng7" firstAttribute="top" secondItem="saf-329-od0" secondAttribute="top" constant="16" id="vwC-330-oe1"/>
+                            <constraint firstItem="sta-306-ng7" firstAttribute="leading" secondItem="saf-329-od0" secondAttribute="leading" constant="32" id="vwC-331-of2"/>
+                            <constraint firstItem="saf-329-od0" firstAttribute="trailing" secondItem="sta-306-ng7" secondAttribute="trailing" constant="32" id="vwC-332-og3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="nav-333-oh4">
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="bbi-334-oi5">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Set-VC-001" id="act-335-oj6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userIDTextField" destination="txt-311-nl2" id="out-336-ok7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frs-337-ol8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="LegatoBlue">
+            <color red="0.165" green="0.388" blue="0.769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoCream">
+            <color red="0.980" green="0.965" blue="0.925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoError">
+            <color red="0.761" green="0.208" blue="0.169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoInk">
+            <color red="0.118" green="0.141" blue="0.200" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoMuted">
+            <color red="0.435" green="0.416" blue="0.369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoOnBlue">
+            <color red="1.000" green="1.000" blue="1.000" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
