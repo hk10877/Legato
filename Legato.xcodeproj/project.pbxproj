@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		61E4C894308820860035BC35 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 61E4C893308820860035BC35 /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7A5AD35530818435005C9C1E /* Legato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Legato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E4C894308820860035BC35 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = Legato;
 			packageProductDependencies = (
+				61E4C893308820860035BC35 /* FirebaseAuth */,
 			);
 			productName = Legato;
 			productReference = 7A5AD35530818435005C9C1E /* Legato.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 7A5AD34C30818435005C9C1E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				61E4C892308820860035BC35 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7A5AD35630818435005C9C1E /* Products */;
 			projectDirPath = "";
@@ -345,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		61E4C892308820860035BC35 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		61E4C893308820860035BC35 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61E4C892308820860035BC35 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A5AD34D30818435005C9C1E /* Project object */;
 }

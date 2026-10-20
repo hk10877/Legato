@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 struct AuthValidator {
 
@@ -31,6 +32,30 @@ struct AuthValidator {
             return "Passwords don't match."
         }
         return nil
+    }
+    
+    static func firebaseErrorMessage(error: Error) -> String {
+        let nsError = error as NSError
+        guard let code = AuthErrorCode(rawValue: nsError.code) else {
+            return "Something went wrong. Please try again."
+        }
+        
+        switch code {
+            case .invalidCredential, .wrongPassword, .userNotFound:
+                return "Incorrect email or password."
+            case .invalidEmail:
+                return "Please enter a valid email address."
+            case .emailAlreadyInUse:
+                return "Email is already in use. Please use a different email."
+            case .weakPassword:
+                return "Password must be at least 6 characters."
+            case .networkError:
+                return "No internet connection. Please try again."
+            case .tooManyRequests:
+                return "Too many attempts. Please wait a moment and try again."
+            default:
+                return "Something went wrong. Please try again."
+        }
     }
 
     private static func emailError(_ email: String) -> String? {

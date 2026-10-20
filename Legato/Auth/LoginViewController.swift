@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -40,6 +41,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func attemptLogin(email: String, password: String) {
-        performSegue(withIdentifier: "showMain", sender: self)
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                self.errorLabel.text = AuthValidator.firebaseErrorMessage(error: error)
+                self.errorLabel.isHidden = false
+                return
+            }
+            
+            // successful sign-in
+            self.performSegue(withIdentifier: "showMain", sender: self)
+        }
     }
 }

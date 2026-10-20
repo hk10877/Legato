@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController, UITextFieldDelegate {
     
@@ -38,7 +39,12 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logOutTapped(_ sender: Any) {
-        view.window?.rootViewController?.dismiss(animated: true)
+        do {
+            try Auth.auth().signOut()
+            view.window?.rootViewController?.dismiss(animated: true)
+        } catch {
+            self.showAlert(title: "Log out failed", message: error.localizedDescription)
+        }
     }
     
     @IBAction func deleteAccountTapped(_ sender: Any) {

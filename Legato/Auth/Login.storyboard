@@ -98,7 +98,7 @@
                                             <color key="baseForegroundColor" name="LegatoBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Sgn-VC-001" kind="show" identifier="showSignUp" id="seg-01-by1"/>
+                                            <segue destination="Sgn-VC-001" kind="show" identifier="showMain" id="seg-01-by1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -117,7 +117,7 @@
                         <outlet property="emailTextField" destination="txt-23-xc3" id="out-29-dw9"/>
                         <outlet property="errorLabel" destination="err-12-mn2" id="out-30-ev0"/>
                         <outlet property="passwordTextField" destination="txt-25-za5" id="out-33-hs3"/>
-                        <segue destination="Main-Ref-001" kind="presentation" identifier="showMain" modalPresentationStyle="fullScreen" id="seg-110-ma1"/>
+                        <segue destination="Main-Ref-001" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="seg-110-ma1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fir-16-qj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,7 +243,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="seg-110-ma1"/>
+        <segue reference="seg-111-mb2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LegatoLogo" width="1024" height="1024"/>

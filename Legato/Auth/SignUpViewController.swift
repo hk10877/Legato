@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -49,6 +50,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func attemptSignUp(email: String, password: String) {
-        performSegue(withIdentifier: "showMain", sender: self)
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                self.errorLabel.text = AuthValidator.firebaseErrorMessage(error: error)
+                self.errorLabel.isHidden = false
+                return
+            }
+            
+            // successful sign-up
+            self.performSegue(withIdentifier: "showMain", sender: self)
+        }
     }
 }
