@@ -4,10 +4,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     let sectionTitles = ["Recently Viewed", "My Ratings", "Listening Parties"]
     let sectionRows = [["Album Name - Artist Name", "Song Title - Artist Name", "Album Name - Artist Name"], ["Album Name - ★★★★☆", "Song Title - ★★★☆☆", "Song Title - ★★★★★"], ["Late Night Mix", "Study Session"]]
@@ -15,6 +17,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        if let userID = Auth.auth().currentUser?.displayName {
+            usernameLabel.text = "@\(userID)"
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

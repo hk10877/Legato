@@ -7,17 +7,17 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
         view.endEditing(true)
         let email = emailTextField.text ?? ""
@@ -39,7 +39,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         errorLabel.isHidden = true
         attemptLogin(email: email, password: password)
     }
-
+    
+    @IBAction func forgotPasswordTapped(_ sender: Any) {
+        view.endEditing(true)
+        let email = emailTextField.text ?? ""
+        if let message = AuthValidator.forgotPasswordError(email: email) {
+            errorLabel.text = message
+            errorLabel.isHidden = false
+            return
+        }
+        errorLabel.isHidden = true
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                self.errorLabel.text = AuthValidator.firebaseErrorMessage(error: error)
+                self.errorLabel.isHidden = false
+                return
+            }
+            let alert = UIAlertController(title: "Check Your Email", message: "If an account exists for \(email), we sent a link to reset your password.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
+    
     private func attemptLogin(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
@@ -49,7 +70,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             
             // successful sign-in
-            self.performSegue(withIdentifier: "showMain", sender: self)
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
         }
     }
 }

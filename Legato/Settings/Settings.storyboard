@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sta-306-ng7">
-                                <rect key="frame" x="32" y="119" width="329" height="520"/>
+                                <rect key="frame" x="32" y="134" width="329" height="521.33333333333337"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="img-307-nh8">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.6666666666666643" width="329" height="88.666666666666686"/>
                                         <color key="tintColor" name="LegatoMuted"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="ihC-308-ni9"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-309-nj0">
-                                        <rect key="frame" x="0.0" y="106" width="329" height="34"/>
+                                        <rect key="frame" x="0.0" y="106" width="329" height="32"/>
                                         <state key="normal" title="Change Photo"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Change Photo">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
@@ -39,53 +38,53 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txt-311-nl2">
-                                        <rect key="frame" x="0.0" y="156" width="329" height="44"/>
+                                        <rect key="frame" x="0.0" y="154" width="329" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fhC-312-nm3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="none" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="row-313-nn4">
-                                        <rect key="frame" x="0.0" y="216" width="329" height="34"/>
+                                        <rect key="frame" x="0.0" y="214" width="329" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-314-no5">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="LegatoInk"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="dpk-315-np6">
-                                                <rect key="frame" x="208" y="0.0" width="121" height="34"/>
+                                                <rect key="frame" x="208" y="0.0" width="121" height="50"/>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="row-316-nq7">
-                                        <rect key="frame" x="0.0" y="266" width="329" height="31"/>
+                                        <rect key="frame" x="0.0" y="280" width="329" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-317-nr8">
-                                                <rect key="frame" x="0.0" y="0.0" width="272" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="LegatoInk"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swi-318-ns9">
-                                                <rect key="frame" x="280" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="268" y="0.0" width="63" height="28"/>
                                                 <color key="onTintColor" name="LegatoBlue"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="row-319-nt0">
-                                        <rect key="frame" x="0.0" y="313" width="329" height="32"/>
+                                        <rect key="frame" x="0.0" y="324" width="329" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Echo distance (mi)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-320-nu1">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="LegatoInk"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="seg-321-nv2">
-                                                <rect key="frame" x="158" y="0.0" width="171" height="33"/>
+                                                <rect key="frame" x="189" y="0.0" width="140" height="32"/>
                                                 <segments>
                                                     <segment title="5"/>
                                                     <segment title="10"/>
@@ -96,7 +95,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-322-nw3">
-                                        <rect key="frame" x="0.0" y="361" width="329" height="34"/>
+                                        <rect key="frame" x="0.0" y="371" width="329" height="34.333333333333314"/>
                                         <state key="normal" title="Link Spotify"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Link Spotify">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -107,7 +106,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-324-ny5">
-                                        <rect key="frame" x="0.0" y="411" width="329" height="52"/>
+                                        <rect key="frame" x="0.0" y="421.33333333333337" width="329" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="bhC-325-nz6"/>
                                         </constraints>
@@ -122,7 +121,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-327-ob8">
-                                        <rect key="frame" x="0.0" y="479" width="329" height="34"/>
+                                        <rect key="frame" x="0.0" y="489.33333333333337" width="329" height="32"/>
                                         <state key="normal" title="Delete Account"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Delete Account">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
@@ -151,33 +150,37 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="birthdayDatePicker" destination="dpk-315-np6" id="Ekb-xA-lyS"/>
+                        <outlet property="echoDistanceSegmentedControl" destination="seg-321-nv2" id="HDd-0M-uIL"/>
+                        <outlet property="notificationSwitch" destination="swi-318-ns9" id="e7P-Fq-YoI"/>
+                        <outlet property="profileImageView" destination="img-307-nh8" id="9ha-3n-dpf"/>
                         <outlet property="userIDTextField" destination="txt-311-nl2" id="out-336-ok7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frs-337-ol8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0" y="0.0"/>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="LegatoBlue">
-            <color red="0.165" green="0.388" blue="0.769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16500000000000001" green="0.38800000000000001" blue="0.76900000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LegatoCream">
-            <color red="0.980" green="0.965" blue="0.925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.96470588235294119" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LegatoError">
-            <color red="0.761" green="0.208" blue="0.169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.76100000000000001" green="0.20799999999999999" blue="0.16900000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LegatoInk">
-            <color red="0.118" green="0.141" blue="0.200" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.11764705882352941" green="0.14117647058823529" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LegatoMuted">
-            <color red="0.435" green="0.416" blue="0.369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.43529411764705883" green="0.41568627450980394" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LegatoOnBlue">
-            <color red="1.000" green="1.000" blue="1.000" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -18,7 +18,13 @@ struct AuthValidator {
         return nil
     }
 
-    static func signUpError(email: String, password: String, confirmPassword: String) -> String? {
+    static func signUpError(userID: String, email: String, password: String, confirmPassword: String) -> String? {
+        if userID.isEmpty {
+            return "Please enter a user ID."
+        }
+        if userID.contains(" ") {
+            return "User ID can't have spaces."
+        }
         if let emailMessage = emailError(email) {
             return emailMessage
         }
@@ -66,5 +72,9 @@ struct AuthValidator {
             return "Please enter a valid email address."
         }
         return nil
+    }
+    
+    static func forgotPasswordError(email: String) -> String? {
+        return emailError(email)
     }
 }

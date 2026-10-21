@@ -9,6 +9,10 @@ import FirebaseAuth
 class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var userIDTextField: UITextField!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var birthdayDatePicker: UIDatePicker!
+    @IBOutlet weak var notificationSwitch: UISwitch!
+    @IBOutlet weak var echoDistanceSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()

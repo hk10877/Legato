@@ -104,6 +104,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tbl-414-po5" id="out-428-qc9"/>
+                        <outlet property="usernameLabel" destination="lbl-411-pl2" id="z5X-DB-exY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frs-429-qd0" userLabel="First Responder" sceneMemberID="firstResponder"/>

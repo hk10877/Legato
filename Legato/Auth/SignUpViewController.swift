@@ -12,16 +12,20 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var userIDTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
+        userIDTextField.delegate = self
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextField {
+        if textField == userIDTextField {
+            emailTextField.becomeFirstResponder()
+        } else if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
             confirmPasswordTextField.becomeFirstResponder()
@@ -33,32 +37,35 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
         view.endEditing(true)
+        let userID = userIDTextField.text ?? ""
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let confirmPassword = confirmPasswordTextField.text ?? ""
-        if let message = AuthValidator.signUpError(email: email, password: password, confirmPassword: confirmPassword) {
+        if let message = AuthValidator.signUpError(userID: userID, email: email, password: password, confirmPassword: confirmPassword) {
             errorLabel.text = message
             errorLabel.isHidden = false
             return
         }
         errorLabel.isHidden = true
-        attemptSignUp(email: email, password: password)
+        attemptSignUp(userID: userID, email: email, password: password)
     }
 
     @IBAction func logInButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 
-    private func attemptSignUp(email: String, password: String) {
+    private func attemptSignUp(userID: String, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 self.errorLabel.text = AuthValidator.firebaseErrorMessage(error: error)
                 self.errorLabel.isHidden = false
                 return
             }
-            
-            // successful sign-up
-            self.performSegue(withIdentifier: "showMain", sender: self)
+            let changeRequest = authResult?.user.createProfileChangeRequest()
+            changeRequest?.displayName = userID
+            changeRequest?.commitChanges { _ in
+                self.performSegue(withIdentifier: "showMain", sender: self)
+            }
         }
     }
 }
