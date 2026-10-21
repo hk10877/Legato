@@ -8,16 +8,19 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    // Outlets for Labels and text fields
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
+    // Assign delegates for text fields
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
     
+    // Helps with triggering login and advancing from email to password field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
@@ -27,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    // Validates user credientials and starts firebase sign in
     @IBAction func loginButtonTapped(_ sender: Any) {
         view.endEditing(true)
         let email = emailTextField.text ?? ""
@@ -40,15 +44,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         attemptLogin(email: email, password: password)
     }
     
+    // Sends a password reset link through firebase auth to address entered in the email field
     @IBAction func forgotPasswordTapped(_ sender: Any) {
         view.endEditing(true)
         let email = emailTextField.text ?? ""
+        // checks if the password is properly formatted
         if let message = AuthValidator.forgotPasswordError(email: email) {
             errorLabel.text = message
             errorLabel.isHidden = false
             return
         }
         errorLabel.isHidden = true
+        
+        // Request firebase to reset the password
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 self.errorLabel.text = AuthValidator.firebaseErrorMessage(error: error)
@@ -61,6 +69,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // Authenticates the user with firebase using email and password
+    // Also segues to profile screen
     private func attemptLogin(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {

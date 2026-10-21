@@ -8,6 +8,7 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
+    // IB outlets for Labels and Text fields
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
@@ -16,12 +17,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // sets delegates on all text fields
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
         userIDTextField.delegate = self
     }
 
+    // Moves cursor to the correct text fields when next is pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userIDTextField {
             emailTextField.becomeFirstResponder()
@@ -35,6 +38,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
+    // Validates all the registration fields and starts the account creation
     @IBAction func signUpButtonTapped(_ sender: Any) {
         view.endEditing(true)
         let userID = userIDTextField.text ?? ""
@@ -50,10 +54,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         attemptSignUp(userID: userID, email: email, password: password)
     }
 
+    // Pops the current view controller off the the nav stack to return back to the login screen
     @IBAction func logInButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 
+    // creates a new user account in firebase, sets the display name to userID, and segues to the main screen
     private func attemptSignUp(userID: String, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {

@@ -8,16 +8,19 @@ import FirebaseAuth
 
 struct AuthValidator {
 
+    // Validates the user email and password before attempting a login request
     static func loginError(email: String, password: String) -> String? {
         if let emailMessage = emailError(email) {
             return emailMessage
         }
+        // Makes sure that the password field is not left blank
         if password.isEmpty {
             return "Please enter your password."
         }
         return nil
     }
-
+    
+    // Validates all user information like userID, email, password
     static func signUpError(userID: String, email: String, password: String, confirmPassword: String) -> String? {
         if userID.isEmpty {
             return "Please enter a user ID."
@@ -40,6 +43,7 @@ struct AuthValidator {
         return nil
     }
     
+    // Displays error messages to the user if there are problems with Firebase Authentication
     static func firebaseErrorMessage(error: Error) -> String {
         let nsError = error as NSError
         guard let code = AuthErrorCode(rawValue: nsError.code) else {
@@ -63,7 +67,8 @@ struct AuthValidator {
                 return "Something went wrong. Please try again."
         }
     }
-
+    
+    // Helper method that checks if the email string is non empty and contains email characters like "@" and "."
     private static func emailError(_ email: String) -> String? {
         if email.isEmpty {
             return "Please enter your email."
@@ -74,6 +79,7 @@ struct AuthValidator {
         return nil
     }
     
+    // Validates the email input before requesting a password reset email
     static func forgotPasswordError(email: String) -> String? {
         return emailError(email)
     }
