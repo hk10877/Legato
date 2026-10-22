@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Alb-VC-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album-->
+        <scene sceneID="Alb-194-bla">
+            <objects>
+                <tableViewController storyboardIdentifier="AlbumViewController" id="Alb-VC-001" customClass="AlbumViewController" customModule="Legato" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Alb-066-bla">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="LegatoCream"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Alb-008-bla">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-007-bla">
+                                    <rect key="frame" x="99.333333333333329" y="7.9999999999999858" width="194.33333333333337" height="241.66666666666663"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-001-bla">
+                                            <rect key="frame" x="17.333333333333343" y="2.6666666666666714" width="160" height="155.66666666666663"/>
+                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                            <color key="tintColor" name="LegatoBlue"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="Alb-002-bla"/>
+                                                <constraint firstAttribute="height" constant="160" id="Alb-003-bla"/>
+                                            </constraints>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="56"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-004-bla">
+                                            <rect key="frame" x="72.666666666666671" y="166" width="49.333333333333329" height="28.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <color key="textColor" name="LegatoInk"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SZA · 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-005-bla">
+                                            <rect key="frame" x="58.666666666666671" y="200.66666666666666" width="77.000000000000014" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" name="LegatoMuted"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="★★★★☆  4.4 · 1,208 ratings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-006-bla">
+                                            <rect key="frame" x="0.0" y="224.66666666666666" width="194.33333333333334" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="LegatoBlue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Alb-007-bla" firstAttribute="centerX" secondItem="Alb-008-bla" secondAttribute="centerX" id="Alb-009-bla"/>
+                                <constraint firstItem="Alb-007-bla" firstAttribute="top" secondItem="Alb-008-bla" secondAttribute="top" constant="8" id="Alb-010-bla"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Tracks" id="Alb-067-bla">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Alb-016-bla">
+                                        <rect key="frame" x="20" y="325.33333206176758" width="353" height="50.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-016-bla" id="Alb-017-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="50.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-014-bla">
+                                                    <rect key="frame" x="16" y="14.999999999999998" width="298.66666666666669" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-011-bla">
+                                                            <rect key="frame" x="0.0" y="1.3333333333333321" width="7" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" name="LegatoMuted"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Kill Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-012-bla">
+                                                            <rect key="frame" x="21" y="0.66666666666666607" width="193" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="LegatoInk"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-013-bla">
+                                                            <rect key="frame" x="227.99999999999997" y="1.6666666666666679" width="70.666666666666657" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="LegatoBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-014-bla" firstAttribute="leading" secondItem="Alb-017-bla" secondAttribute="leadingMargin" id="Alb-018-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-014-bla" secondAttribute="trailing" id="Alb-019-bla"/>
+                                                <constraint firstItem="Alb-014-bla" firstAttribute="top" secondItem="Alb-017-bla" secondAttribute="topMargin" id="Alb-020-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-014-bla" secondAttribute="bottom" id="Alb-021-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Now-VC-001" kind="show" identifier="showNowPlaying" id="Alb-015-bla"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Alb-027-bla">
+                                        <rect key="frame" x="20" y="375.66666412353516" width="353" height="50.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-027-bla" id="Alb-028-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="50.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-025-bla">
+                                                    <rect key="frame" x="16" y="14.999999999999998" width="298.66666666666669" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-022-bla">
+                                                            <rect key="frame" x="0.0" y="1.3333333333333321" width="9" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" name="LegatoMuted"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Snooze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-023-bla">
+                                                            <rect key="frame" x="23" y="0.66666666666666607" width="191" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="LegatoInk"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-024-bla">
+                                                            <rect key="frame" x="227.99999999999997" y="1.6666666666666679" width="70.666666666666657" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="LegatoBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-025-bla" firstAttribute="leading" secondItem="Alb-028-bla" secondAttribute="leadingMargin" id="Alb-029-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-025-bla" secondAttribute="trailing" id="Alb-030-bla"/>
+                                                <constraint firstItem="Alb-025-bla" firstAttribute="top" secondItem="Alb-028-bla" secondAttribute="topMargin" id="Alb-031-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-025-bla" secondAttribute="bottom" id="Alb-032-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Now-VC-001" kind="show" identifier="showNowPlaying" id="Alb-026-bla"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Alb-038-bla">
+                                        <rect key="frame" x="20" y="425.99999618530273" width="353" height="50.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-038-bla" id="Alb-039-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="50.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-036-bla">
+                                                    <rect key="frame" x="16" y="14.999999999999998" width="298.66666666666669" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-033-bla">
+                                                            <rect key="frame" x="0.0" y="1.3333333333333321" width="9.3333333333333339" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" name="LegatoMuted"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Good Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-034-bla">
+                                                            <rect key="frame" x="23.333333333333329" y="0.66666666666666607" width="190.66666666666669" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="LegatoInk"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-035-bla">
+                                                            <rect key="frame" x="227.99999999999997" y="1.6666666666666679" width="70.666666666666657" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="LegatoBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-036-bla" firstAttribute="leading" secondItem="Alb-039-bla" secondAttribute="leadingMargin" id="Alb-040-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-036-bla" secondAttribute="trailing" id="Alb-041-bla"/>
+                                                <constraint firstItem="Alb-036-bla" firstAttribute="top" secondItem="Alb-039-bla" secondAttribute="topMargin" id="Alb-042-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-036-bla" secondAttribute="bottom" id="Alb-043-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Now-VC-001" kind="show" identifier="showNowPlaying" id="Alb-037-bla"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Alb-049-bla">
+                                        <rect key="frame" x="20" y="476.33332824707031" width="353" height="50.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-049-bla" id="Alb-050-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="50.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-047-bla">
+                                                    <rect key="frame" x="16" y="14.999999999999998" width="298.66666666666669" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-044-bla">
+                                                            <rect key="frame" x="0.0" y="1.3333333333333321" width="9.6666666666666661" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" name="LegatoMuted"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Shirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-045-bla">
+                                                            <rect key="frame" x="23.666666666666671" y="0.66666666666666607" width="190.33333333333331" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="LegatoInk"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-046-bla">
+                                                            <rect key="frame" x="227.99999999999997" y="1.6666666666666679" width="70.666666666666657" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="LegatoBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-047-bla" firstAttribute="leading" secondItem="Alb-050-bla" secondAttribute="leadingMargin" id="Alb-051-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-047-bla" secondAttribute="trailing" id="Alb-052-bla"/>
+                                                <constraint firstItem="Alb-047-bla" firstAttribute="top" secondItem="Alb-050-bla" secondAttribute="topMargin" id="Alb-053-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-047-bla" secondAttribute="bottom" id="Alb-054-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Now-VC-001" kind="show" identifier="showNowPlaying" id="Alb-048-bla"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Alb-060-bla">
+                                        <rect key="frame" x="20" y="526.66666030883789" width="353" height="50.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-060-bla" id="Alb-061-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="50.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-058-bla">
+                                                    <rect key="frame" x="16" y="14.999999999999998" width="298.66666666666669" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-055-bla">
+                                                            <rect key="frame" x="0.0" y="1.3333333333333321" width="9.3333333333333339" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" name="LegatoMuted"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Nobody Gets Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-056-bla">
+                                                            <rect key="frame" x="23.333333333333329" y="0.66666666666666607" width="190.66666666666669" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="LegatoInk"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★☆☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-057-bla">
+                                                            <rect key="frame" x="227.99999999999997" y="1.6666666666666679" width="70.666666666666657" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="LegatoBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-058-bla" firstAttribute="leading" secondItem="Alb-061-bla" secondAttribute="leadingMargin" id="Alb-062-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-058-bla" secondAttribute="trailing" id="Alb-063-bla"/>
+                                                <constraint firstItem="Alb-058-bla" firstAttribute="top" secondItem="Alb-061-bla" secondAttribute="topMargin" id="Alb-064-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-058-bla" secondAttribute="bottom" id="Alb-065-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Now-VC-001" kind="show" identifier="showNowPlaying" id="Alb-059-bla"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Alb-VC-001" id="Alb-068-bla"/>
+                            <outlet property="delegate" destination="Alb-VC-001" id="Alb-069-bla"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Album" largeTitleDisplayMode="never" id="Alb-070-bla"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Alb-195-bla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="0.0"/>
+        </scene>
+        <!--Now Playing-->
+        <scene sceneID="Alb-196-bla">
+            <objects>
+                <viewController storyboardIdentifier="NowPlayingViewController" id="Now-VC-001" customClass="NowPlayingViewController" customModule="Legato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Alb-071-bla">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-073-bla">
+                                <rect key="frame" x="66.666666666666686" y="79" width="260" height="254"/>
+                                <color key="backgroundColor" name="LegatoYellow"/>
+                                <color key="tintColor" name="LegatoBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="Alb-074-bla"/>
+                                    <constraint firstAttribute="height" constant="260" id="Alb-075-bla"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-104-bla">
+                                <rect key="frame" x="24" y="355" width="345" height="252"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-082-bla">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="46.333333333333336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-078-bla">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="46.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Kill Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-076-bla">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="26.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <color key="textColor" name="LegatoInk"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SZA · SOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-077-bla">
+                                                        <rect key="frame" x="0.0" y="28.333333333333314" width="71.333333333333329" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" name="LegatoMuted"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-081-bla">
+                                                <rect key="frame" x="79.333333333333343" y="6" width="265.66666666666663" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★☆" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-079-bla">
+                                                        <rect key="frame" x="190.66666666666669" y="0.0" width="75" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" name="LegatoBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album avg 4.4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-080-bla">
+                                                        <rect key="frame" x="184.66666666666669" y="20" width="81" height="14.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" name="LegatoMuted"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-083-bla">
+                                        <rect key="frame" x="0.0" y="58.333333333333314" width="345" height="34"/>
+                                        <color key="minimumTrackTintColor" name="LegatoBlue"/>
+                                        <color key="thumbTintColor" name="LegatoBlue"/>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-086-bla">
+                                        <rect key="frame" x="0.0" y="104.33333333333331" width="345" height="14.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0:14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-084-bla">
+                                                <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="LegatoMuted"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="2:24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-085-bla">
+                                                <rect key="frame" x="176.66666666666663" y="0.0" width="168.33333333333337" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="LegatoMuted"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-090-bla">
+                                        <rect key="frame" x="0.0" y="130.66666666666669" width="345" height="63.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-087-bla">
+                                                <rect key="frame" x="0.0" y="19.666666666666629" width="109.66666666666667" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" name="LegatoInk"/>
+                                                <state key="normal" image="backward.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-088-bla">
+                                                <rect key="frame" x="117.66666666666666" y="0.0" width="109.66666666666666" height="63.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" name="LegatoBlue"/>
+                                                <state key="normal" image="pause.circle.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="56"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-089-bla">
+                                                <rect key="frame" x="235.33333333333329" y="19.666666666666629" width="109.66666666666666" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" name="LegatoInk"/>
+                                                <state key="normal" image="forward.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-103-bla">
+                                        <rect key="frame" x="0.0" y="206" width="345" height="46"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-098-bla">
+                                                <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="46"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Your rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-091-bla">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="15.666666666666666"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" name="LegatoMuted"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-097-bla">
+                                                        <rect key="frame" x="0.0" y="19.666666666666629" width="165.66666666666666" height="26.333333333333332"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-092-bla">
+                                                                <rect key="frame" x="0.0" y="0.0" width="28.333333333333332" height="26.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="tintColor" name="LegatoBlue"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                                </state>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-093-bla">
+                                                                <rect key="frame" x="34.333333333333336" y="0.0" width="28.333333333333332" height="26.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="tintColor" name="LegatoBlue"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                                </state>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-094-bla">
+                                                                <rect key="frame" x="68.666666666666671" y="0.0" width="28.333333333333332" height="26.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="tintColor" name="LegatoBlue"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                                </state>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-095-bla">
+                                                                <rect key="frame" x="103" y="0.0" width="28.333333333333332" height="26.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="tintColor" name="LegatoBlue"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                                </state>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-096-bla">
+                                                                <rect key="frame" x="137.33333333333334" y="0.0" width="28.333333333333332" height="26.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="tintColor" name="LegatoBlue"/>
+                                                                <state key="normal" image="star" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-100-bla">
+                                                <rect key="frame" x="289" y="1" width="56" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="56" id="Alb-101-bla"/>
+                                                    <constraint firstAttribute="height" constant="44" id="Alb-102-bla"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" name="LegatoBlue"/>
+                                                <state key="normal" image="bubble.left.and.bubble.right.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Com-VC-001" kind="show" identifier="showComments" id="Alb-099-bla"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Alb-072-bla"/>
+                        <color key="backgroundColor" name="LegatoCream"/>
+                        <constraints>
+                            <constraint firstItem="Alb-073-bla" firstAttribute="top" secondItem="Alb-072-bla" secondAttribute="top" constant="16" id="Alb-105-bla"/>
+                            <constraint firstItem="Alb-073-bla" firstAttribute="centerX" secondItem="Alb-071-bla" secondAttribute="centerX" id="Alb-106-bla"/>
+                            <constraint firstItem="Alb-104-bla" firstAttribute="top" secondItem="Alb-073-bla" secondAttribute="bottom" constant="20" id="Alb-107-bla"/>
+                            <constraint firstItem="Alb-104-bla" firstAttribute="leading" secondItem="Alb-072-bla" secondAttribute="leading" constant="24" id="Alb-108-bla"/>
+                            <constraint firstItem="Alb-072-bla" firstAttribute="trailing" secondItem="Alb-104-bla" secondAttribute="trailing" constant="24" id="Alb-109-bla"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Now Playing" largeTitleDisplayMode="never" id="Alb-110-bla"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Alb-197-bla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="0.0"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="Alb-198-bla">
+            <objects>
+                <tableViewController storyboardIdentifier="CommentsViewController" id="Com-VC-001" customClass="CommentsViewController" customModule="Legato" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Alb-188-bla">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="LegatoCream"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Alb-122-bla">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-121-bla">
+                                    <rect key="frame" x="20" y="16" width="353" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-111-bla">
+                                            <rect key="frame" x="0.0" y="0.33333333333333215" width="48" height="47.333333333333343"/>
+                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                            <color key="tintColor" name="LegatoBlue"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="48" id="Alb-112-bla"/>
+                                                <constraint firstAttribute="height" constant="48" id="Alb-113-bla"/>
+                                            </constraints>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-117-bla">
+                                            <rect key="frame" x="60" y="1" width="237" height="46.333333333333336"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Kill Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-114-bla">
+                                                    <rect key="frame" x="0.0" y="0.0" width="237" height="19.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" name="LegatoInk"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="SZA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-115-bla">
+                                                    <rect key="frame" x="0.0" y="22.333333333333336" width="237" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="LegatoMuted"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-116-bla">
+                                                    <rect key="frame" x="0.0" y="42.333333333333336" width="237" height="4"/>
+                                                    <color key="progressTintColor" name="LegatoBlue"/>
+                                                </progressView>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-118-bla">
+                                            <rect key="frame" x="309" y="2" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="Alb-119-bla"/>
+                                                <constraint firstAttribute="height" constant="44" id="Alb-120-bla"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="tintColor" name="LegatoBlue"/>
+                                            <state key="normal" image="pause.circle.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Alb-121-bla" firstAttribute="leading" secondItem="Alb-122-bla" secondAttribute="leading" constant="20" id="Alb-123-bla"/>
+                                <constraint firstAttribute="trailing" secondItem="Alb-121-bla" secondAttribute="trailing" constant="20" id="Alb-124-bla"/>
+                                <constraint firstItem="Alb-121-bla" firstAttribute="centerY" secondItem="Alb-122-bla" secondAttribute="centerY" id="Alb-125-bla"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Comments" id="Alb-189-bla">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Alb-137-bla">
+                                        <rect key="frame" x="20" y="135.33333206176758" width="353" height="129.66667175292969"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-137-bla" id="Alb-138-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="129.66667175292969"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-136-bla">
+                                                    <rect key="frame" x="16" y="15.000000000000007" width="321" height="99.666666666666686"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-126-bla">
+                                                            <rect key="frame" x="0.0" y="0.66666666666666785" width="34" height="32.666666666666664"/>
+                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="34" id="Alb-127-bla"/>
+                                                                <constraint firstAttribute="height" constant="34" id="Alb-128-bla"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-135-bla">
+                                                            <rect key="frame" x="44" y="0.0" width="277" height="98.666666666666671"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="@maya · 2h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-129-bla">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="the bridge on this one 😭" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-130-bla">
+                                                                    <rect key="frame" x="0.0" y="21" width="175" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-133-bla">
+                                                                    <rect key="frame" x="0.0" y="43" width="127.66666666666667" height="23.666666666666668"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-131-bla">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="23.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                                            <state key="normal" title=" 40" image="heart" catalog="system"/>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-132-bla">
+                                                                            <rect key="frame" x="62.666666666666671" y="0.0" width="65" height="23.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                                            <state key="normal" title=" Reply" image="arrowshape.turn.up.left" catalog="system"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-134-bla">
+                                                                    <rect key="frame" x="0.0" y="70.666666666666671" width="85" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="tintColor" name="LegatoBlue"/>
+                                                                    <state key="normal" title="View 2 replies"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-136-bla" firstAttribute="leading" secondItem="Alb-138-bla" secondAttribute="leadingMargin" id="Alb-139-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-136-bla" secondAttribute="trailing" id="Alb-140-bla"/>
+                                                <constraint firstItem="Alb-136-bla" firstAttribute="top" secondItem="Alb-138-bla" secondAttribute="topMargin" id="Alb-141-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-136-bla" secondAttribute="bottom" id="Alb-142-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Alb-154-bla">
+                                        <rect key="frame" x="20" y="265.00000381469727" width="353" height="129.66667175292969"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-154-bla" id="Alb-155-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="129.66667175292969"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-153-bla">
+                                                    <rect key="frame" x="16" y="15.000000000000007" width="321" height="99.666666666666686"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-143-bla">
+                                                            <rect key="frame" x="0.0" y="0.66666666666666785" width="34" height="32.666666666666664"/>
+                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="34" id="Alb-144-bla"/>
+                                                                <constraint firstAttribute="height" constant="34" id="Alb-145-bla"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-152-bla">
+                                                            <rect key="frame" x="44" y="0.0" width="277" height="98.666666666666671"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="@jordan · 5h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-146-bla">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SZA never misses" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-147-bla">
+                                                                    <rect key="frame" x="0.0" y="21" width="122.33333333333333" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-150-bla">
+                                                                    <rect key="frame" x="0.0" y="43" width="125.66666666666667" height="23.666666666666668"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-148-bla">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="44.666666666666664" height="23.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                                            <state key="normal" title=" 12" image="heart" catalog="system"/>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-149-bla">
+                                                                            <rect key="frame" x="60.666666666666671" y="0.0" width="65" height="23.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                                            <state key="normal" title=" Reply" image="arrowshape.turn.up.left" catalog="system"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-151-bla">
+                                                                    <rect key="frame" x="0.0" y="70.666666666666671" width="73" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="tintColor" name="LegatoBlue"/>
+                                                                    <state key="normal" title="View 1 reply"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-153-bla" firstAttribute="leading" secondItem="Alb-155-bla" secondAttribute="leadingMargin" id="Alb-156-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-153-bla" secondAttribute="trailing" id="Alb-157-bla"/>
+                                                <constraint firstItem="Alb-153-bla" firstAttribute="top" secondItem="Alb-155-bla" secondAttribute="topMargin" id="Alb-158-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-153-bla" secondAttribute="bottom" id="Alb-159-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Alb-170-bla">
+                                        <rect key="frame" x="20" y="394.66667556762695" width="353" height="97.666664123535156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-170-bla" id="Alb-171-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="97.666664123535156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-169-bla">
+                                                    <rect key="frame" x="16" y="15" width="321" height="67.666666666666671"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-160-bla">
+                                                            <rect key="frame" x="0.0" y="0.66666666666666785" width="34" height="32.666666666666664"/>
+                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="34" id="Alb-161-bla"/>
+                                                                <constraint firstAttribute="height" constant="34" id="Alb-162-bla"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-168-bla">
+                                                            <rect key="frame" x="44" y="0.0" width="277" height="66.666666666666671"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="@alex · 1d" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-163-bla">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Snooze is better, fight me" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-164-bla">
+                                                                    <rect key="frame" x="0.0" y="21" width="175.33333333333334" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-167-bla">
+                                                                    <rect key="frame" x="0.0" y="43" width="119.66666666666667" height="23.666666666666668"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-165-bla">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="38.666666666666664" height="23.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                                            <state key="normal" title=" 8" image="heart" catalog="system"/>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-166-bla">
+                                                                            <rect key="frame" x="54.666666666666671" y="0.0" width="65" height="23.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="tintColor" name="LegatoMuted"/>
+                                                                            <state key="normal" title=" Reply" image="arrowshape.turn.up.left" catalog="system"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-169-bla" firstAttribute="leading" secondItem="Alb-171-bla" secondAttribute="leadingMargin" id="Alb-172-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-169-bla" secondAttribute="trailing" id="Alb-173-bla"/>
+                                                <constraint firstItem="Alb-169-bla" firstAttribute="top" secondItem="Alb-171-bla" secondAttribute="topMargin" id="Alb-174-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-169-bla" secondAttribute="bottom" id="Alb-175-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="Alb-190-bla">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Alb-182-bla">
+                                        <rect key="frame" x="20" y="528.33333778381348" width="353" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alb-182-bla" id="Alb-183-bla">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-181-bla">
+                                                    <rect key="frame" x="16" y="15" width="321" height="45"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a comment…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-176-bla">
+                                                            <rect key="frame" x="0.0" y="0.6666666666666643" width="269" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="Alb-177-bla"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-178-bla">
+                                                            <rect key="frame" x="277" y="0.6666666666666643" width="44" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="44" id="Alb-179-bla"/>
+                                                                <constraint firstAttribute="height" constant="44" id="Alb-180-bla"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="tintColor" name="LegatoBlue"/>
+                                                            <state key="normal" image="paperplane.fill" catalog="system">
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Alb-181-bla" firstAttribute="leading" secondItem="Alb-183-bla" secondAttribute="leadingMargin" id="Alb-184-bla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Alb-181-bla" secondAttribute="trailing" id="Alb-185-bla"/>
+                                                <constraint firstItem="Alb-181-bla" firstAttribute="top" secondItem="Alb-183-bla" secondAttribute="topMargin" id="Alb-186-bla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Alb-181-bla" secondAttribute="bottom" id="Alb-187-bla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Com-VC-001" id="Alb-191-bla"/>
+                            <outlet property="delegate" destination="Com-VC-001" id="Alb-192-bla"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Comments" largeTitleDisplayMode="never" id="Alb-193-bla"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Alb-199-bla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231" y="0.0"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Alb-059-bla"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="104"/>
+        <image name="backward.fill" catalog="system" width="128" height="76"/>
+        <image name="bubble.left.and.bubble.right.fill" catalog="system" width="128" height="102"/>
+        <image name="forward.fill" catalog="system" width="128" height="76"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="music.note" catalog="system" width="96" height="128"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <image name="pause.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="LegatoBlue">
+            <color red="0.16470588235294117" green="0.38823529411764707" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoCream">
+            <color red="0.98039215686274506" green="0.96470588235294119" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoInk">
+            <color red="0.11764705882352941" green="0.14117647058823529" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoMuted">
+            <color red="0.43529411764705883" green="0.41568627450980394" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoYellow">
+            <color red="1" green="0.95294117647058818" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

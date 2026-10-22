@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hom-Nav-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="Hom-087-moh">
+            <objects>
+                <navigationController id="Hom-Nav-001" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Hom-084-moh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Hom-085-moh">
+                        <rect key="frame" x="0.0" y="118" width="393" height="106"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hom-VC-001" kind="relationship" relationship="rootViewController" id="Hom-086-moh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hom-088-moh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="0.0"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Hom-089-moh">
+            <objects>
+                <tableViewController storyboardIdentifier="HomeViewController" id="Hom-VC-001" customClass="HomeViewController" customModule="Legato" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hom-078-moh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="LegatoCream"/>
+                        <sections>
+                            <tableViewSection headerTitle="Recommended for you" id="Hom-079-moh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Hom-012-moh">
+                                        <rect key="frame" x="20" y="38" width="353" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hom-012-moh" id="Hom-013-moh">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-010-moh">
+                                                    <rect key="frame" x="16" y="15" width="298.66666666666669" height="57"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-003-moh">
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="52" height="51.000000000000007"/>
+                                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                                            <color key="tintColor" name="LegatoBlue"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Hom-004-moh"/>
+                                                                <constraint firstAttribute="height" constant="52" id="Hom-005-moh"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-009-moh">
+                                                            <rect key="frame" x="63.999999999999986" y="0.6666666666666643" width="234.66666666666663" height="56"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="SOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-006-moh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="19.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="SZA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-007-moh">
+                                                                    <rect key="frame" x="0.0" y="21.333333333333336" width="234.66666666666666" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoMuted"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="★★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-008-moh">
+                                                                    <rect key="frame" x="0.0" y="40.333333333333336" width="234.66666666666666" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" name="LegatoBlue"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hom-010-moh" firstAttribute="leading" secondItem="Hom-013-moh" secondAttribute="leadingMargin" id="Hom-014-moh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hom-010-moh" secondAttribute="trailing" id="Hom-015-moh"/>
+                                                <constraint firstItem="Hom-010-moh" firstAttribute="top" secondItem="Hom-013-moh" secondAttribute="topMargin" id="Hom-016-moh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hom-010-moh" secondAttribute="bottom" id="Hom-017-moh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Alb-Ref-001" kind="show" identifier="showAlbum" id="Hom-011-moh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Hom-027-moh">
+                                        <rect key="frame" x="20" y="125" width="353" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hom-027-moh" id="Hom-028-moh">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-025-moh">
+                                                    <rect key="frame" x="16" y="15" width="298.66666666666669" height="57"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-018-moh">
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="52" height="51.000000000000007"/>
+                                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                                            <color key="tintColor" name="LegatoBlue"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Hom-019-moh"/>
+                                                                <constraint firstAttribute="height" constant="52" id="Hom-020-moh"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-024-moh">
+                                                            <rect key="frame" x="63.999999999999986" y="0.6666666666666643" width="234.66666666666663" height="56"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="GUTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-021-moh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="19.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Olivia Rodrigo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-022-moh">
+                                                                    <rect key="frame" x="0.0" y="21.333333333333336" width="234.66666666666666" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoMuted"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="★★★★☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-023-moh">
+                                                                    <rect key="frame" x="0.0" y="40.333333333333336" width="234.66666666666666" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" name="LegatoBlue"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hom-025-moh" firstAttribute="leading" secondItem="Hom-028-moh" secondAttribute="leadingMargin" id="Hom-029-moh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hom-025-moh" secondAttribute="trailing" id="Hom-030-moh"/>
+                                                <constraint firstItem="Hom-025-moh" firstAttribute="top" secondItem="Hom-028-moh" secondAttribute="topMargin" id="Hom-031-moh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hom-025-moh" secondAttribute="bottom" id="Hom-032-moh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Alb-Ref-001" kind="show" identifier="showAlbum" id="Hom-026-moh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Hom-042-moh">
+                                        <rect key="frame" x="20" y="212" width="353" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hom-042-moh" id="Hom-043-moh">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-040-moh">
+                                                    <rect key="frame" x="16" y="15" width="298.66666666666669" height="57"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-033-moh">
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="52" height="51.000000000000007"/>
+                                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                                            <color key="tintColor" name="LegatoBlue"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Hom-034-moh"/>
+                                                                <constraint firstAttribute="height" constant="52" id="Hom-035-moh"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-039-moh">
+                                                            <rect key="frame" x="63.999999999999986" y="0.6666666666666643" width="234.66666666666663" height="56"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="After Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-036-moh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="19.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="The Weeknd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-037-moh">
+                                                                    <rect key="frame" x="0.0" y="21.333333333333336" width="234.66666666666666" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoMuted"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="★★★★☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-038-moh">
+                                                                    <rect key="frame" x="0.0" y="40.333333333333336" width="234.66666666666666" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" name="LegatoBlue"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hom-040-moh" firstAttribute="leading" secondItem="Hom-043-moh" secondAttribute="leadingMargin" id="Hom-044-moh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hom-040-moh" secondAttribute="trailing" id="Hom-045-moh"/>
+                                                <constraint firstItem="Hom-040-moh" firstAttribute="top" secondItem="Hom-043-moh" secondAttribute="topMargin" id="Hom-046-moh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hom-040-moh" secondAttribute="bottom" id="Hom-047-moh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Alb-Ref-001" kind="show" identifier="showAlbum" id="Hom-041-moh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Recently listened" id="Hom-080-moh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Hom-057-moh">
+                                        <rect key="frame" x="20" y="355" width="353" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hom-057-moh" id="Hom-058-moh">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-055-moh">
+                                                    <rect key="frame" x="16" y="15" width="298.66666666666669" height="57"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-048-moh">
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="52" height="51.000000000000007"/>
+                                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                                            <color key="tintColor" name="LegatoBlue"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Hom-049-moh"/>
+                                                                <constraint firstAttribute="height" constant="52" id="Hom-050-moh"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-054-moh">
+                                                            <rect key="frame" x="63.999999999999986" y="0.6666666666666643" width="234.66666666666663" height="56"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Midnights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-051-moh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="19.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Taylor Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-052-moh">
+                                                                    <rect key="frame" x="0.0" y="21.333333333333336" width="234.66666666666666" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoMuted"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="★★★☆☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-053-moh">
+                                                                    <rect key="frame" x="0.0" y="40.333333333333336" width="234.66666666666666" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" name="LegatoBlue"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hom-055-moh" firstAttribute="leading" secondItem="Hom-058-moh" secondAttribute="leadingMargin" id="Hom-059-moh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hom-055-moh" secondAttribute="trailing" id="Hom-060-moh"/>
+                                                <constraint firstItem="Hom-055-moh" firstAttribute="top" secondItem="Hom-058-moh" secondAttribute="topMargin" id="Hom-061-moh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hom-055-moh" secondAttribute="bottom" id="Hom-062-moh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Alb-Ref-001" kind="show" identifier="showAlbum" id="Hom-056-moh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Hom-072-moh">
+                                        <rect key="frame" x="20" y="442" width="353" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hom-072-moh" id="Hom-073-moh">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-070-moh">
+                                                    <rect key="frame" x="16" y="15" width="298.66666666666669" height="57"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-063-moh">
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="52" height="51.000000000000007"/>
+                                                            <color key="backgroundColor" name="LegatoYellow"/>
+                                                            <color key="tintColor" name="LegatoBlue"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Hom-064-moh"/>
+                                                                <constraint firstAttribute="height" constant="52" id="Hom-065-moh"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-069-moh">
+                                                            <rect key="frame" x="63.999999999999986" y="0.6666666666666643" width="234.66666666666663" height="56"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Blonde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-066-moh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="19.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" name="LegatoInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Frank Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-067-moh">
+                                                                    <rect key="frame" x="0.0" y="21.333333333333336" width="234.66666666666666" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" name="LegatoMuted"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="★★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-068-moh">
+                                                                    <rect key="frame" x="0.0" y="40.333333333333336" width="234.66666666666666" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" name="LegatoBlue"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hom-070-moh" firstAttribute="leading" secondItem="Hom-073-moh" secondAttribute="leadingMargin" id="Hom-074-moh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hom-070-moh" secondAttribute="trailing" id="Hom-075-moh"/>
+                                                <constraint firstItem="Hom-070-moh" firstAttribute="top" secondItem="Hom-073-moh" secondAttribute="topMargin" id="Hom-076-moh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hom-070-moh" secondAttribute="bottom" id="Hom-077-moh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Alb-Ref-001" kind="show" identifier="showAlbum" id="Hom-071-moh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Hom-VC-001" id="Hom-081-moh"/>
+                            <outlet property="delegate" destination="Hom-VC-001" id="Hom-082-moh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="Hom-083-moh">
+                        <barButtonItem key="leftBarButtonItem" image="person.crop.circle.fill" catalog="system" id="Hom-001-moh">
+                            <connections>
+                                <segue destination="Pro-Ref-001" kind="show" identifier="showProfile" id="Hom-002-moh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hom-090-moh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="0.0"/>
+        </scene>
+        <!--ProfileViewController-->
+        <scene sceneID="Hom-091-moh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileViewController" id="Pro-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hom-092-moh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-150"/>
+        </scene>
+        <!--Album-->
+        <scene sceneID="Hom-093-moh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Album" id="Alb-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hom-094-moh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="150"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hom-056-moh"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="music.note" catalog="system" width="96" height="128"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="LegatoBlue">
+            <color red="0.16470588235294117" green="0.38823529411764707" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoCream">
+            <color red="0.98039215686274506" green="0.96470588235294119" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoInk">
+            <color red="0.11764705882352941" green="0.14117647058823529" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoMuted">
+            <color red="0.43529411764705883" green="0.41568627450980394" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LegatoYellow">
+            <color red="1" green="0.95294117647058818" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

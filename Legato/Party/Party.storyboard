@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Par-Nav-001">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Party-->
+        <scene sceneID="Par-004-rap">
+            <objects>
+                <navigationController id="Par-Nav-001" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Party" image="headphones" catalog="system" id="Par-001-rap"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Par-002-rap">
+                        <rect key="frame" x="0.0" y="62" width="440" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Par-VC-001" kind="relationship" relationship="rootViewController" id="Par-003-rap"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Par-005-rap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="0.0"/>
+        </scene>
+        <!--Listening Party-->
+        <scene sceneID="Par-009-rap">
+            <objects>
+                <viewController id="Par-VC-001" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Par-006-rap">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Par-007-rap"/>
+                        <color key="backgroundColor" name="LegatoCream"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Listening Party" id="Par-008-rap"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Par-010-rap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="headphones" catalog="system" width="32" height="32"/>
+        <namedColor name="LegatoCream">
+            <color red="0.98039215686274506" green="0.96470588235294119" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

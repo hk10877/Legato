@@ -1,44 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tab-Ctl-001">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="Tab-007-bat">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Legato" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-hE-p3e">
-                                <rect key="frame" x="193.66666666666666" y="157" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="hB9-hE-p3e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8m5-qT-SCt"/>
-                            <constraint firstItem="hB9-hE-p3e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Kak-vu-EMn"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="Tab-Ctl-001" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tab-006-bat">
+                        <rect key="frame" x="0.0" y="873" width="440" height="83"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="LegatoBlue"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hom-Ref-001" kind="relationship" relationship="viewControllers" id="Tab-001-bat"/>
+                        <segue destination="Sta-Ref-001" kind="relationship" relationship="viewControllers" id="Tab-002-bat"/>
+                        <segue destination="Ech-Ref-001" kind="relationship" relationship="viewControllers" id="Tab-003-bat"/>
+                        <segue destination="Par-Ref-001" kind="relationship" relationship="viewControllers" id="Tab-004-bat"/>
+                        <segue destination="Sea-Ref-001" kind="relationship" relationship="viewControllers" id="Tab-005-bat"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-008-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16.030534351145036" y="103.52112676056339"/>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Tab-009-bat">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="Hom-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-010-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="-400"/>
+        </scene>
+        <!--Stars-->
+        <scene sceneID="Tab-011-bat">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Stars" id="Sta-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-012-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="-200"/>
+        </scene>
+        <!--Echo-->
+        <scene sceneID="Tab-013-bat">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Echo" id="Ech-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-014-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="0.0"/>
+        </scene>
+        <!--Party-->
+        <scene sceneID="Tab-015-bat">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Party" id="Par-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-016-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="200"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Tab-017-bat">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="Sea-Ref-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tab-018-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="400"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="LegatoBlue">
+            <color red="0.16470588235294117" green="0.38823529411764707" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
